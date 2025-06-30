@@ -19,6 +19,8 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@tailwindcss/postcss": "^4",
+    "@csstools/postcss-global-data": "^3.0.0",
+    "postcss-custom-media": "^11.0.6",
     "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.3.4",
