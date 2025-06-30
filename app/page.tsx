@@ -1,5 +1,5 @@
 import { Button } from "./_components/button/button";
-import { PaddedContainer } from "./_components/container/padded-container";
+import { MobilePaddedContainer } from "./_components/container/mobile-padded-container";
 import { PageHeading } from "./_components/page-heading/page-heading";
 import Image from "next/image";
 import styles from "./page.module.css";
@@ -7,11 +7,11 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <HomeWrapper>
-      <PaddedContainer>
+      <MobilePaddedContainer>
         <Title />
         <Subtitle />
         <BrowseModelsButton />
-      </PaddedContainer>
+      </MobilePaddedContainer>
       <HomeImage />
     </HomeWrapper>
   );
@@ -48,6 +48,7 @@ const HomeImage = () => {
       width={1206}
       height={1201}
       className={styles.homeImage}
+      priority
     />
   );
 };
