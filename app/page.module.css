@@ -1,0 +1,15 @@
+.homeWrapper {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.browseModelsButton {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.homeImage {
+  width: 100%;
+}
