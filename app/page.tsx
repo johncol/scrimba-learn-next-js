@@ -7,7 +7,8 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <HomeWrapper>
-      <MobilePaddedContainer>
+      <MobilePaddedContainer className={styles.textContainer}>
+        <CatchPhrase />
         <Title />
         <Subtitle />
         <BrowseModelsButton />
@@ -18,8 +19,14 @@ export default function Home() {
 }
 
 const HomeWrapper: React.FC<React.HTMLProps<HTMLDivElement>> = (props) => {
+  return <main {...props} className={styles.homeWrapper} />;
+};
+
+const CatchPhrase = () => {
   return (
-    <main {...props} className={styles.homeWrapper} />
+    <p className={styles.catchPhrase}>
+      Your go-to platform for 3D printing files
+    </p>
   );
 };
 
@@ -42,13 +49,23 @@ const BrowseModelsButton = () => {
 
 const HomeImage = () => {
   return (
-    <Image
-      src="/images/home-image-2.png"
-      alt="3D printing"
-      width={1206}
-      height={1201}
-      className={styles.homeImage}
-      priority
-    />
+    <div>
+      <Image
+        src="/images/home-image-2.png"
+        alt="3D printing"
+        width={1206}
+        height={1201}
+        className={styles.homeImageMobile}
+        priority
+      />
+      <Image
+        src="/images/home-image-1.png"
+        alt="3D printing"
+        width={1206}
+        height={1201}
+        className={styles.homeImageDesktop}
+        priority
+      />
+    </div>
   );
 };
