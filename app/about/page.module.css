@@ -1,0 +1,31 @@
+.pageWrapper {}
+
+.tinyTitle {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.squareImage {
+  aspect-ratio: 1/1;
+  margin-bottom: 20px;
+}
+
+.perks {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-top: 20px;
+  padding: 40px 20px;
+
+  --border: 1px solid #DDDDDD;
+  border-top: var(--border);
+  border-bottom: var(--border);
+}
+
+.vision {
+  p + p {
+    padding-top: 20px;
+  }
+}

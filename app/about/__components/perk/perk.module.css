@@ -1,0 +1,14 @@
+.perk {
+  h3 {
+    font-size: 28px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
