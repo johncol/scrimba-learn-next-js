@@ -3,4 +3,8 @@
   font-weight: 700;
   line-height: 1;
   margin-bottom: 20px;
+
+  @media (--tablet-and-above) {
+    font-size: 5.6rem;
+  }
 }
