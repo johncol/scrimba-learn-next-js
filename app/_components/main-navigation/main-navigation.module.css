@@ -1,0 +1,40 @@
+.mainNavigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+
+  @media (--mobile) {
+    padding: 17px 20px;
+
+    .logoDesktop {
+      display: none;
+    }
+  }
+
+  @media (--tablet-and-above) {
+    margin: 0 auto;
+    max-width: 1512px;
+    padding: 13px 40px;
+
+    .logoMobile {
+      display: none;
+    }
+  }
+
+  a {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    color: #606060;
+
+    &:first-child {
+      margin-right: auto;
+    }
+
+    &:hover, &:focus {
+      color: #F77429;
+    }
+  }
+}

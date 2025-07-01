@@ -12,7 +12,7 @@
     align-items: center;
     max-width: 1512px;
     margin: 0 auto;
-    padding: 40px min(92px, 5vw);
+    padding: 40px min(92px, 7vw);
     gap: min(100px, 6vw);
 
     > * {

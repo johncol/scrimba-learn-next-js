@@ -1,0 +1,9 @@
+.bodyWrapper {
+  height: 100dvh;
+  
+  @media (--tablet-and-above) {
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-gutter: stable;
+  }
+}
