@@ -1,0 +1,5 @@
+.verticalSeparator {
+  width: 1px;
+  background: linear-gradient(to bottom, #000000, #666666);
+  align-self: stretch;
+}

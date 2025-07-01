@@ -1,4 +1,18 @@
-.pageWrapper {}
+.heroSection {
+  @media (--tablet-and-above) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1512px;
+    margin: 0 auto;
+    padding: 40px min(92px, 5vw);
+    gap: min(100px, 6vw);
+
+    >* {
+      flex: 1;
+    }
+  }
+}
 
 .tinyTitle {
   font-size: 14px;
@@ -8,24 +22,50 @@
 }
 
 .squareImage {
+  width: 100%;
   aspect-ratio: 1/1;
   margin-bottom: 20px;
 }
 
 .perks {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-  margin-top: 20px;
-  padding: 40px 20px;
-
   --border: 1px solid #DDDDDD;
   border-top: var(--border);
   border-bottom: var(--border);
+
+  @media (--mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin-top: 20px;
+    padding: 40px 20px;
+
+    .separator {
+      display: none;
+    }
+  }
+
+  @media (--tablet-and-above) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 48px;
+    padding: 80px min(60px, 5vw);
+
+    > *:not(.separator) {
+      max-width: 350px;
+    }
+
+    .separator {
+      align-self: stretch;
+    }
+  }
 }
 
 .vision {
-  p + p {
+  max-width: 800px;
+  margin: 40px auto;
+
+  p+p {
     padding-top: 20px;
   }
 }
