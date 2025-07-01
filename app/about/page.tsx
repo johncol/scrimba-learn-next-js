@@ -37,6 +37,7 @@ const HomeImage = () => {
         alt="Hero image"
         className={styles.squareImage}
         priority
+        placeholder="blur"
       />
     </div>
   );

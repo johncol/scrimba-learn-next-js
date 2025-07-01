@@ -64,6 +64,7 @@ const HomeImage = () => {
         alt="3D printing"
         className={styles.homeImageDesktop}
         priority
+        placeholder="blur"
       />
     </div>
   );
