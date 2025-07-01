@@ -1,12 +1,17 @@
-html,
-body {
+html {
   font-size: 10px;
+}
+
+body {
+  font-size: 2.4rem;
+}
+
+html, body {
   color: #1E1E1E;
   font-family: var(--font-albert-sans);
 }
 
 p {
-  font-size: 2.4rem;
   font-weight: 400;
   line-height: 1.3;
 
