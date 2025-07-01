@@ -1,7 +1,6 @@
 .pageHeading {
   font-size: 4rem;
   font-weight: 700;
-  line-height: 1;
   margin-bottom: 20px;
 
   @media (--tablet-and-above) {

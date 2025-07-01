@@ -1,13 +1,8 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
 import "./_styles/globals.css";
 import { MainNavigation } from "./_components/main-navigation/main-navigation";
 import styles from "./layout.module.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import { albertSans, montserratAlternates } from "./_styles/fonts";
 
 export const metadata: Metadata = {
   title: "PrintForge",
@@ -17,9 +12,10 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const fonts = `${albertSans.variable} ${montserratAlternates.variable}`;
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} antialiased`}>
+      <body className={`${fonts} antialiased`}>
         <div className={styles.bodyWrapper}>
           <header>
             <MainNavigation />

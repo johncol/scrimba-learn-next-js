@@ -15,7 +15,7 @@
   @media (--tablet-and-above) {
     margin: 0 auto;
     max-width: 1512px;
-    padding: 13px 40px;
+    padding: 21px 40px;
 
     .logoMobile {
       display: none;
