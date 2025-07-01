@@ -1,6 +1,7 @@
 import FlagIcon from "@/public/icons/Flag.svg";
 import GlobeSimpleIcon from "@/public/icons/GlobeSimple.svg";
 import StackIcon from "@/public/icons/Stack.svg";
+import SquareImage from "@/public/images/square-image.png";
 import Image from "next/image";
 import { MobilePaddedContainer } from "../_components/container/mobile-padded-container";
 import { HorizontalSeparator } from "../_components/horizontal-separator/horizontal-separator";
@@ -32,10 +33,8 @@ const HomeImage = () => {
   return (
     <div>
       <Image
-        src="/images/square-image.png"
+        src={SquareImage}
         alt="Hero image"
-        width={627}
-        height={627}
         className={styles.squareImage}
         priority
       />

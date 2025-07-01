@@ -1,8 +1,11 @@
+import Image from "next/image";
 import { Button } from "./_components/button/button";
 import { MobilePaddedContainer } from "./_components/container/mobile-padded-container";
 import { PageHeading } from "./_components/page-heading/page-heading";
-import Image from "next/image";
 import styles from "./page.module.css";
+
+import HomeImage1 from "@/public/images/home-image-1.png";
+import HomeImage2 from "@/public/images/home-image-2.png";
 
 export default function Home() {
   return (
@@ -51,18 +54,14 @@ const HomeImage = () => {
   return (
     <div>
       <Image
-        src="/images/home-image-2.png"
+        src={HomeImage2}
         alt="3D printing"
-        width={1206}
-        height={1201}
         className={styles.homeImageMobile}
         priority
       />
       <Image
-        src="/images/home-image-1.png"
+        src={HomeImage1}
         alt="3D printing"
-        width={1206}
-        height={1201}
         className={styles.homeImageDesktop}
         priority
       />
