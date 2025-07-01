@@ -1,29 +1,26 @@
 import Image from "next/image";
 import { Button } from "./_components/button/button";
-import { MobilePaddedContainer } from "./_components/container/mobile-padded-container";
+import { MobileContainer } from "./_components/container/mobile-container";
 import { PageHeading } from "./_components/page-heading/page-heading";
 import styles from "./page.module.css";
 
 import HomeImage1 from "@/public/images/home-image-1.png";
 import HomeImage2 from "@/public/images/home-image-2.png";
+import { DesktopContainer } from "./_components/container/desktop-container";
 
 export default function Home() {
   return (
-    <HomeWrapper>
-      <MobilePaddedContainer className={styles.textContainer}>
+    <DesktopContainer as="main" className={styles.homeWrapper}>
+      <MobileContainer className={styles.textContainer}>
         <CatchPhrase />
         <Title />
         <Subtitle />
         <BrowseModelsButton />
-      </MobilePaddedContainer>
+      </MobileContainer>
       <HomeImage />
-    </HomeWrapper>
+    </DesktopContainer>
   );
 }
-
-const HomeWrapper: React.FC<React.HTMLProps<HTMLDivElement>> = (props) => {
-  return <main {...props} className={styles.homeWrapper} />;
-};
 
 const CatchPhrase = () => {
   return (

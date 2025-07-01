@@ -1,0 +1,11 @@
+.defaultContainer {
+  @media (--mobile) {
+    padding: 40px 20px 20px;
+  }
+
+  @media (--tablet-and-above) {
+    max-width: 1512px;
+    margin: 0 auto;
+    padding: 40px min(92px, 7vw);
+  }
+}

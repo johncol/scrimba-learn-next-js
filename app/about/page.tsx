@@ -3,7 +3,7 @@ import GlobeSimpleIcon from "@/public/icons/GlobeSimple.svg";
 import StackIcon from "@/public/icons/Stack.svg";
 import SquareImage from "@/public/images/square-image.png";
 import Image from "next/image";
-import { MobilePaddedContainer } from "../_components/container/mobile-padded-container";
+import { DefaultContainer } from "../_components/container/default-container";
 import { HorizontalSeparator } from "../_components/horizontal-separator/horizontal-separator";
 import { PageHeading } from "../_components/page-heading/page-heading";
 import { VerticalSeparator } from "../_components/vertical-separator/vertical-separator";
@@ -13,18 +13,18 @@ import styles from "./page.module.css";
 export default function About() {
   return (
     <main>
-      <MobilePaddedContainer className={styles.heroSection}>
+      <DefaultContainer className={styles.heroSection}>
         <HomeImage />
         <section>
           <p className={styles.tinyTitle}>About PrintForge</p>
           <PageHeading>Empowering makers worldwide</PageHeading>
           <Intro />
         </section>
-      </MobilePaddedContainer>
+      </DefaultContainer>
       <PerksSection />
-      <MobilePaddedContainer>
+      <DefaultContainer>
         <VisionSection />
-      </MobilePaddedContainer>
+      </DefaultContainer>
     </main>
   );
 }
