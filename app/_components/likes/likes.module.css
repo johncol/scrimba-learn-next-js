@@ -1,0 +1,14 @@
+.likes {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1;
+
+  img {
+    height: 17px;
+  }
+}

@@ -1,0 +1,24 @@
+.modelCard {
+  border: 1px solid #A1A1A1;
+  border-radius: 10px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+
+  .modelCardContent {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+}
