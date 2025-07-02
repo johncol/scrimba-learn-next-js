@@ -1,5 +1,5 @@
 import type { Model } from "@/types/models";
-import ModelsJson from "@/app/_data/models.json";
+import ModelsJson from "@/data/models.json";
 import { DefaultContainer } from "../_components/container/default-container";
 import { ModelCard } from "../_components/model-card/model-card";
 
