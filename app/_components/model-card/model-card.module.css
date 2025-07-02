@@ -3,6 +3,15 @@
   border-radius: var(--default-border-radius);
   overflow: hidden;
 
+  &.clickable {
+    cursor: pointer;
+    transition: box-shadow 0.1s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+
   img {
     width: 100%;
   }
