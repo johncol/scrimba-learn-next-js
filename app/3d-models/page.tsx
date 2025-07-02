@@ -4,6 +4,7 @@ import { DefaultContainer } from "../_components/container/default-container";
 import { ModelCard } from "../_components/model-card/model-card";
 
 import styles from "./page.module.css";
+import Link from "next/link";
 
 export default async function Page() {
   const models = ModelsJson as Model[];
@@ -11,7 +12,9 @@ export default async function Page() {
   return (
     <DefaultContainer className={styles.modelsPage}>
       {models.map((model) => (
-        <ModelCard key={model.id} model={model} />
+        <Link key={model.id} href={`/3d-models/${model.id}`}>
+          <ModelCard model={model} />
+        </Link>
       ))}
     </DefaultContainer>
   );
