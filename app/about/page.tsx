@@ -7,7 +7,7 @@ import { DefaultContainer } from "../_components/container/default-container";
 import { HorizontalSeparator } from "../_components/horizontal-separator/horizontal-separator";
 import { PageHeading } from "../_components/page-heading/page-heading";
 import { VerticalSeparator } from "../_components/vertical-separator/vertical-separator";
-import { Perk } from "./__components/perk/perk";
+import { Perk } from "./_components/perk/perk";
 import styles from "./page.module.css";
 
 export default function About() {
