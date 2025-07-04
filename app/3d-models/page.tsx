@@ -2,7 +2,7 @@ import { DefaultContainer } from "../_components/container/default-container";
 import { ModelCard } from "../_components/model-card/model-card";
 
 import Link from "next/link";
-import { getAllModels } from "../_api/getAllModels";
+import { getAllModels } from "../_api/models/getAllModels";
 import styles from "./page.module.css";
 
 export default async function Page() {

@@ -1,4 +1,4 @@
-import { getModelById } from "@/app/_api/getModelById";
+import { getModelById } from "@/app/_api/models/getModelById";
 import { DefaultContainer } from "@/app/_components/container/default-container";
 import { Likes } from "@/app/_components/likes/likes";
 import { PageHeading } from "@/app/_components/page-heading/page-heading";
