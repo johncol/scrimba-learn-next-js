@@ -1,0 +1,91 @@
+.modelPage {
+  display: flex;
+
+  @media (--mobile) {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  @media (--tablet-and-above) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+
+    > img {
+      flex: 6;
+    }
+
+    > :not(img) {
+      flex: 4;
+    }
+  }
+}
+
+.modelImage {
+  border-radius: var(--default-border-radius);
+
+  @media (--mobile) {
+    width: 100%;
+  }
+}
+
+.modelInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1;
+
+  @media (--tablet-and-above) {
+    align-self: stretch;
+    justify-content: center;
+    position: relative;
+  }
+}
+
+.modelName {
+  margin-top: -10px;
+  margin-bottom: 0;
+}
+
+.dateAdded {
+  font-size: 1.6rem;
+
+  @media (--mobile) {
+    margin-top: auto;
+  }
+}
+
+.backLink {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color: #606060;
+}
+
+.modelPage {
+  @media (--mobile) {
+    position: relative;
+  }
+
+  @media (--tablet-and-above) {
+    .modelInfo {
+      position: relative;
+    }
+  }
+
+  .backLink {
+    position: absolute;
+    top: 0;
+
+    @media (--mobile) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media (--tablet-and-above) {
+      left: 0;
+    }
+  }
+}
