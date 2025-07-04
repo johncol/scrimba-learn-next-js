@@ -19,7 +19,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
           <header>
             <MainNavigation />
           </header>
-          {children}
+          <div>{children}</div>
         </div>
       </body>
     </html>

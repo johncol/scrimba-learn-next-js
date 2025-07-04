@@ -1,6 +1,12 @@
 .bodyWrapper {
   height: 100dvh;
-  
+
+  display: flex;
+  flex-direction: column;
+  > :last-child {
+    flex-grow: 1;
+  }
+
   @media (--tablet-and-above) {
     overflow-y: scroll;
     scrollbar-width: thin;
