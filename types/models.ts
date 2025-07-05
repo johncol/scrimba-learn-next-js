@@ -7,3 +7,8 @@ export type Model = {
   category: string;
   dateAdded: string;
 };
+
+export type Category = {
+  slug: string;
+  displayName: string;
+};
