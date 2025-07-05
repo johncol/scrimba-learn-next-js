@@ -1,0 +1,38 @@
+.categoriesNavigation {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+  overflow-x: scroll;
+  scrollbar-width: none;
+
+  @media (--mobile) {
+    transform: translateY(-100%);
+  }
+
+  @media (--tablet-and-above) {
+    flex-direction: column;
+  }
+
+  li {
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  a {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: 0.05em;
+    color: #606060;
+
+    &:hover {
+      color: #F77429;
+    }
+
+    font-weight: 600;
+
+    @media (--tablet-and-above) {
+      font-weight: 500;
+    }
+  }
+}

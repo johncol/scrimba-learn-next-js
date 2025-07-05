@@ -67,6 +67,7 @@
 .modelPage {
   @media (--mobile) {
     position: relative;
+    padding-top: 40px;
   }
 
   @media (--tablet-and-above) {

@@ -1,5 +1,4 @@
 import { getModelById } from "@/app/_api/models/getModelById";
-import { DefaultContainer } from "@/app/_components/container/default-container";
 import { Likes } from "@/app/_components/likes/likes";
 import { PageHeading } from "@/app/_components/page-heading/page-heading";
 import { Pill } from "@/app/_components/pill/pill";
@@ -34,10 +33,10 @@ export default async function Page({ params }: ModelPageParams) {
 
 const ModelPage = ({ model }: { model: Model }) => {
   return (
-    <DefaultContainer className={styles.modelPage}>
+    <main className={styles.modelPage}>
       <ModelImage model={model} />
       <ModelInfo model={model} />
-    </DefaultContainer>
+    </main>
   );
 };
 

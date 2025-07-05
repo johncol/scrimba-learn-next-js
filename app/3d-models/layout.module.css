@@ -1,0 +1,11 @@
+.layout {
+  @media (--tablet-and-above) {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+
+    > :last-child {
+      flex: 1;
+    }
+  }
+}
