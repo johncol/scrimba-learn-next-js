@@ -35,14 +35,28 @@
     letter-spacing: 0.05em;
     color: #606060;
 
-    &:hover {
+    &:hover,
+    &.active {
       color: #F77429;
     }
 
-    font-weight: 600;
-
+    @media (--mobile) {
+      font-weight: 600;
+    }
     @media (--tablet-and-above) {
       font-weight: 500;
+    }
+
+    @media (--tablet-and-above) {
+      margin-left: -1px;
+      border-left: 1px solid transparent;
+
+      &.active {
+        padding-left: 12px;
+        border-color: #F77429;
+
+        transition: padding-left 0.1s ease-in-out, border-color 0.1s ease-in-out;
+      }
     }
   }
 }
