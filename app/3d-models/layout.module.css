@@ -1,11 +1,20 @@
 .layout {
+  @media (--mobile) {
+    > :first-child {
+      transform: translateY(-120%);
+      margin-bottom: 40px;
+    }
+  }
+
   @media (--tablet-and-above) {
-    display: flex;
-    flex-direction: row;
-    gap: 80px;
+    > :first-child {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+    }
 
     > :last-child {
-      flex: 1;
+      margin-left: 250px;
     }
   }
 }
