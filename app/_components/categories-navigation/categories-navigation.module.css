@@ -1,13 +1,11 @@
 .categoriesNavigation {
   display: flex;
-  flex-direction: row;
   gap: 20px;
-
-  overflow-x: scroll;
-  scrollbar-width: none;
-
+  
   @media (--mobile) {
-    transform: translateY(-100%);
+    flex-direction: row;
+    overflow-x: scroll;
+    scrollbar-width: none;
   }
 
   @media (--tablet-and-above) {
