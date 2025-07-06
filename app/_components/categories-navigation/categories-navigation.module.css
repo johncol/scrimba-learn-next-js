@@ -1,11 +1,23 @@
 .categoriesNavigation {
   display: flex;
   gap: 20px;
-  
+
   @media (--mobile) {
     flex-direction: row;
     overflow-x: scroll;
     scrollbar-width: none;
+
+    --horizontal-padding: 20px;
+
+    margin-left: calc(-1 * var(--horizontal-padding));
+    margin-right: calc(-1 * var(--horizontal-padding));
+    padding-left: var(--horizontal-padding);
+    padding-right: var(--horizontal-padding);
+    mask-image: linear-gradient(to right,
+        #FFF0 0,
+        #FFFF var(--horizontal-padding),
+        #FFFF calc(100% - var(--horizontal-padding)),
+        #FFF0 100%);
   }
 
   @media (--tablet-and-above) {
