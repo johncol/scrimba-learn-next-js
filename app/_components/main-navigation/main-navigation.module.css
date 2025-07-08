@@ -36,5 +36,12 @@
     &:hover, &:focus {
       color: #F77429;
     }
+
+    &.active {
+      color: #F77429;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 8px;
+    }
   }
 }
