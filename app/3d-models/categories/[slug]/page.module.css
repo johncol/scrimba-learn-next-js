@@ -1,0 +1,5 @@
+.main {
+  @media (--mobile) {
+    margin-top: -20px;
+  }
+}

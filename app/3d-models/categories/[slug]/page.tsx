@@ -1,30 +1,28 @@
 import { getCategoryBySlug } from "@/app/_api/categories/getCategoryBySlug";
 import { getAllModelsByCategory } from "@/app/_api/models/getAllModelsByCategory";
 import { ModelsGrid } from "@/app/_components/models-grid/models-grid";
-import { notFound } from "next/navigation";
+import styles from "./page.module.css";
+import { NoModelsFound } from "@/app/_components/no-models-found/no-models-found";
 
-type CategoryPageParams = {
+type PageProps = {
   params: Promise<{
     slug: string;
   }>;
 };
 
-export default async function Page({ params }: CategoryPageParams) {
+export default async function Page({ params }: PageProps) {
   const { slug } = await params;
   const category = await getCategoryBySlug(slug);
-
-  if (!category) {
-    return notFound();
-  }
-
   const models = await getAllModelsByCategory(slug);
 
   return (
-    <main>
+    <main className={styles.main}>
       {models.length > 0 ? (
         <ModelsGrid models={models} />
       ) : (
-        <p>No models found for this category</p>
+        <NoModelsFound>
+          No models found for category &quot;{category ? category.displayName : slug}&quot;
+        </NoModelsFound>
       )}
     </main>
   );
