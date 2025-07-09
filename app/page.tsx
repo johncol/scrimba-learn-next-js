@@ -6,6 +6,7 @@ import styles from "./page.module.css";
 
 import HomeImage1 from "@/public/images/home-image-1.png";
 import HomeImage2 from "@/public/images/home-image-2.png";
+import Link from "next/link";
 import { DesktopContainer } from "./_components/container/desktop-container";
 
 export default function Home() {
@@ -44,7 +45,11 @@ const Subtitle = () => {
 };
 
 const BrowseModelsButton = () => {
-  return <Button className={styles.browseModelsButton}>BROWSE MODELS</Button>;
+  return (
+    <Link href="/3d-models">
+      <Button className={styles.browseModelsButton}>BROWSE MODELS</Button>
+    </Link>
+  );
 };
 
 const HomeImage = () => {
