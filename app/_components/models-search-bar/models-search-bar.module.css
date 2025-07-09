@@ -23,6 +23,6 @@
 
   @media (--tablet-and-above) {
     width: 300px;
-    transform: translateY(-50%);
+    transform: translateY(-75%);
   }
 }
