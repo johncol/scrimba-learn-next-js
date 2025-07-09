@@ -1,0 +1,28 @@
+.form {
+  @media (--tablet-and-above) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.input {
+  border: 1px solid #606060;
+  border-radius: 20px;
+  font-size: 1.4rem;
+  padding: 9px 18px;
+
+  &,
+  &::placeholder {
+    color: #000;
+  }
+
+  @media (--mobile) {
+    width: 100%;
+    transform: translateY(-100%);
+  }
+
+  @media (--tablet-and-above) {
+    width: 300px;
+    transform: translateY(-50%);
+  }
+}
