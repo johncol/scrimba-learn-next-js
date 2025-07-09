@@ -10,6 +10,8 @@ import { VerticalSeparator } from "../_components/vertical-separator/vertical-se
 import { Perk } from "./_components/perk/perk";
 import styles from "./page.module.css";
 
+export const dynamic = "force-static";
+
 export default function About() {
   return (
     <main>
