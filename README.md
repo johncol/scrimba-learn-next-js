@@ -18,10 +18,44 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
 #### Learn More
 
 This is a project following the [Next.js 15 course](https://scrimba.com/learn-nextjs-c02moisq6a) on Scrimba.
 
 The project is called Printforge, and figma designs are here: [Printforge](https://www.figma.com/design/AhRMvZ8bxl9CGaSpMfy8e4/Printforge?node-id=0-1&p=f&t=Zr03u6UyzuvIhE8y-0)
+
+#### Database
+
+Using Prisma. Create a free account on [Prisma](https://www.prisma.io/) and create a new project.
+
+##### Set database connection
+
+The connection to your database is configured via environment variables in a `.env` file.
+
+First, rename the existing `.env.example` file to just `.env`:
+
+Then, find your database credentials in the "Set up database access" section, copy the `DATABASE_URL` environment variable and paste them into the `.env` file.
+
+```bash
+DATABASE_URL="prisma+postgres://accelerate.prisma-data.net/?api_key=ey...."
+```
+
+##### Create database tables
+
+```bash
+npx prisma migrate dev --name init
+```
+
+##### Seed database
+
+```bash
+npm run db-populate
+```
+
+##### Prisma Studio
+
+Use Prisma Studio to explore what records have been created in the database
+
+```terminal
+npx prisma studio
+```
