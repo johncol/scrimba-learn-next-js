@@ -1,6 +1,6 @@
 import { Category } from "@/types/models";
 
-export const categories: Category[] = [
+export const categories: Omit<Category, "id">[] = [
   {
     displayName: "3D Printer",
     slug: "3d-printer",

@@ -1,7 +1,11 @@
 import type { Category } from "@/types/models";
-import { getAllCategories } from "./getAllCategories";
+import { queryDB } from "../queryDB";
 
-export const getCategoryBySlug = async (slug: string) => {
-  const categories = await getAllCategories();
-  return categories.find((category: Category) => category.slug === slug);
+export const getCategoryBySlug = (slug: string): Promise<Category> => {
+  return queryDB(async (prisma) => {
+    const category = await prisma.category.findUnique({
+      where: { slug },
+    });
+    return category as Category;
+  });
 };

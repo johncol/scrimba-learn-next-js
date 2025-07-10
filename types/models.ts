@@ -9,6 +9,7 @@ export type Model = {
 };
 
 export type Category = {
+  id: number;
   slug: string;
   displayName: string;
 };
