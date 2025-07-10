@@ -2,12 +2,9 @@ import type { Category } from "@/types/models";
 import { queryDB } from "../queryDB";
 
 export const getAllCategories = async (): Promise<Category[]> => {
-  return queryDB(async (prisma) => {
-    const categories = await prisma.category.findMany({
-      orderBy: {
-        displayName: "asc",
-      },
-    });
-    return categories as Category[];
-  });
+  return queryDB<Category[]>((prisma) =>
+    prisma.category.findMany({
+      orderBy: { displayName: "asc" },
+    })
+  );
 };
