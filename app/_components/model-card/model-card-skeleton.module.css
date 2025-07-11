@@ -1,0 +1,33 @@
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+}
+
+.modelCardSkeleton {
+  border-color: #f0f0f0;
+
+  .modelCardImage {
+    width: 100%;
+    aspect-ratio: 1;
+  }
+
+  .categoryPill {
+    border-color: #f0f0f0;
+  }
+
+  .modelCardImage,
+  .categoryPill,
+  p,
+  h3 {
+    background: linear-gradient(to right, #f0f0f0 0%, #f8f8f8 50%, #f0f0f0 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    color: transparent;
+  }
+
+  .likes {
+    color: transparent;
+    opacity: 0.3;
+  }
+}
