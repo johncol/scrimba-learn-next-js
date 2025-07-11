@@ -1,7 +1,12 @@
 import type { Model } from "@/types/models";
-import { getAllModels } from "./getAllModels";
+import { queryDB } from "../queryDB";
 
-export const getAllModelsByCategory = async (slug: string) => {
-  const models = await getAllModels();
-  return models.filter((model: Model) => model.category === slug);
+export const getAllModelsByCategory = (slug: string): Promise<Model[]> => {
+  return queryDB<Model[]>((prisma) =>
+    prisma.model.findMany({
+      where: { category: { slug } },
+      include: { category: true },
+      orderBy: { dateAdded: "desc" },
+    })
+  );
 };

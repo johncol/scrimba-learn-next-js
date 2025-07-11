@@ -1,12 +1,16 @@
 import type { Model } from "@/types/models";
-import { getAllModels } from "./getAllModels";
+import { queryDB } from "../queryDB";
 
-export const getModelById = async (id: string) => {
+export const getModelById = (id: string): Promise<Model | null> => {
   const idNumber = parseInt(id);
   if (isNaN(idNumber)) {
     throw new Error("Invalid Model ID");
   }
 
-  const models = await getAllModels();
-  return models.find((model: Model) => model.id === idNumber);
+  return queryDB<Model | null>((prisma) =>
+    prisma.model.findUnique({
+      where: { id: idNumber },
+      include: { category: true },
+    })
+  );
 };

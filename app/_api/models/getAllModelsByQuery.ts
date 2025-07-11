@@ -1,12 +1,17 @@
 import type { Model } from "@/types/models";
-import { getAllModels } from "./getAllModels";
+import { queryDB } from "../queryDB";
 
-export const getAllModelsByQuery = async (query: string) => {
-  const models = await getAllModels();
-  return models.filter((model: Model) => {
-    return (
-      model.name.toLowerCase().includes(query.toLowerCase()) ||
-      model.description.toLowerCase().includes(query.toLowerCase())
-    );
-  });
+export const getAllModelsByQuery = async (query: string): Promise<Model[]> => {
+  return queryDB<Model[]>((prisma) =>
+    prisma.model.findMany({
+      where: {
+        OR: [
+          { name: { contains: query, mode: "insensitive" } },
+          { description: { contains: query, mode: "insensitive" } },
+        ],
+      },
+      include: { category: true },
+      orderBy: { dateAdded: "desc" },
+    })
+  );
 };
