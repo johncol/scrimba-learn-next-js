@@ -17,7 +17,7 @@ export const ModelCard = ({ model, clickable = true }: Props) => {
       <div className={styles.modelCardContent}>
         <h3>{model.name}</h3>
         <p>{model.description}</p>
-        <Pill className={styles.categoryPill}>{model.category}</Pill>
+        <Pill className={styles.categoryPill}>{model.category.displayName}</Pill>
         <Likes likes={model.likes} />
       </div>
     </article>

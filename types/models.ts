@@ -4,7 +4,7 @@ export type Model = {
   description: string;
   likes: number;
   image: string;
-  category: string;
+  category: Category;
   dateAdded: string;
 };
 

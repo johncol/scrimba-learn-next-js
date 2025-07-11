@@ -1,6 +1,13 @@
-import { Model } from "@/types/models";
+type UnpersistedModel = {
+  name: string;
+  description: string;
+  likes: number;
+  image: string;
+  category: string;
+  dateAdded: string;
+};
 
-export const models: Omit<Model, "id">[] = [
+export const models: UnpersistedModel[] = [
   {
     name: "Articulated Dragon",
     description: "A detailed dragon model with movable joints and wings",

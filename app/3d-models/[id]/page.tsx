@@ -59,7 +59,7 @@ const ModelInfo = ({ model }: { model: Model }) => {
       <PageHeading className={styles.modelName} fontSize="small">
         {model.name}
       </PageHeading>
-      <Pill>{model.category}</Pill>
+      <Pill>{model.category.displayName}</Pill>
       <p>{model.description}</p>
       <DateAdded model={model} />
       <BackLink />
